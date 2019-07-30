@@ -13,7 +13,7 @@ The second one is `Hash` that uses the previously computed salt to process the p
 
 ### Getting a salt
 
-```
+```java
 Salt salt = new Salt(16);
 String encodedSalt = salt.toString();
 ```
@@ -22,7 +22,7 @@ The `toString` method returns the salt value into a base 64 encoded string. It's
 
 ### Hashing a password
 
-```
+```java
 Hash hash = new Hash("PASSWORD", salt);
 String encodedPassword = hash.toString();
 ```
@@ -31,7 +31,7 @@ The `toString` method returns the hashed password into a base 64 encoded string.
 
 ### Checking password correctness
 
-```
+```java
 PasswordChecker checker = new PasswordChecker(encodedPassword, "PASSWORD", encodedSalt);
 assertTrue(checker.isCorrect());
 ```
