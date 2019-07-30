@@ -18,7 +18,7 @@ Salt salt = new Salt(16);
 String encodedSalt = salt.toString();
 ```
 
-The `toString` method returns the salut value into a base 64 encoded string. It's useful for saving the salt value.
+The `toString` method returns the salt value into a base 64 encoded string. It's useful for saving the salt value.
 
 ### Hashing a password
 
