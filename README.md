@@ -9,6 +9,17 @@ The first one is the `Salt` that returns a random salt.
 
 The second one is `Hash` that uses the previously computed salt to process the password hashing.
 
+## Maven dependency
+
+```xml
+<dependency>
+  <groupId>com.github.chrix75</groupId>
+  <artifactId>password-hashing</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
+
+
 ## Examples
 
 ### Getting a salt
