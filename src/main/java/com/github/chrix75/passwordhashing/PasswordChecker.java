@@ -16,14 +16,14 @@ public class PasswordChecker {
      * <p>
      * The encoded String are base 64 encoded.
      *
-     * @param encodedHash
-     * @param clearPassword
-     * @param encodedSalt
+     * @param encodedHash Hashed password
+     * @param clearPassword Password will be compared with the hashed password
+     * @param encodedSalt The used salt for password hashing
      */
     public PasswordChecker(String encodedHash, String clearPassword, String encodedSalt) {
-        this.hash = new Hash(Base64.getDecoder().decode(encodedHash));
-        this.clearPassword = clearPassword;
         this.salt = new Salt(Base64.getDecoder().decode(encodedSalt));
+        this.hash = new Hash(Base64.getDecoder().decode(encodedHash), salt);
+        this.clearPassword = clearPassword;
     }
 
     /**

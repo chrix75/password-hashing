@@ -33,9 +33,9 @@ final public class Hash {
      *
      * @param value
      */
-    public Hash(byte[] value) {
+    public Hash(byte[] value, Salt salt) {
         this.password = null;
-        this.salt = null;
+        this.salt = salt;
         this.value = value;
     }
 
